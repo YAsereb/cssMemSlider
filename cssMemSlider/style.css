@@ -6,70 +6,96 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 40rem 40rem 1fr;
-  grid-template-rows: 1fr 1fr 50rem 1fr 1fr;
+  grid-template-rows: 1fr 1fr 45rem 1fr 1fr;
+  background-color: blueviolet;
 }
 
-.slide {
-  width: 80rem;
-  height: 40rem;
-  justify-self: center;
+.slider-wrapper {
+  width: 100%;
+  height: 100%;
+  justify-self: start;
   align-self: center;
   grid-column: 2/4;
   grid-row: 3/4;
   overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 85%;
+  display: flex;
   transition: all 1s;
 }
 
-.img {
+.slide {
+  width: 20%;
+  transition: all 1s;
+
+}
+
+img {
   width: 100%;
   height: 100%;
-  display: flex;
+  border-radius: 10px;
 }
 
-.name-mem {
+.mem-text {
   margin: 0;
+  width: 50%;
   display: flex;
   font-size: 2.5rem;
+  transition: all 1s;
+  overflow: hidden;
   grid-column: 2/3;
   grid-row: 4/5;
-  align-self: start;
-  transition: all 1s;
-}
-
-.name-mem p {
-  margin: 0;
+  justify-self: start;
+  align-self: end;
 }
 
 .controls {
   display: flex;
   justify-content: space-between;
-  align-self: stretch;
-  justify-self: end;
   width: 10rem;
   height: 1.5rem;
   grid-column: 3/4;
-  grid-row: 4/5;
+  grid-row: 3/4;
+  justify-self: end;
+  align-self: end;
 }
 
-label.button {
+.button {
   width: 1.5rem;
   height: 1.5rem;
   background: aqua;
   border-radius: 50%;
 }
 
-#slide1:checked~.slideranimation {
-  margin-left: 0%;
+.button:hover {
+  background: rgb(20, 63, 63);
+  cursor: pointer;
 }
 
-#slide2:checked~.slideranimation {
-  margin-left: -200%;
+#slide1:checked~.left {
+  transform: translateX(0%);
 }
 
-#slide3:checked~.slideranimation {
-  margin-left: -400%;
+#slide2:checked~.left {
+  transform: translateX(-20%);
+}
+
+
+#slide3:checked~.left {
+  transform: translateX(-40%);
+}
+
+#slide4:checked~.left {
+  transform: translateX(-60%);
+}
+
+#slide5:checked~.left {
+  transform: translateX(-80%);
 }
 
 input {
-  visibility: hidden;
+  display: none;
 }

@@ -11,16 +11,14 @@
 </head>
 
 <body>
-  <div class="container">
-
-    <div class="slider-wrapper ">
-      <input type="radio" name="slider" id="slide1" checked>
-      <input type="radio" name="slider" id="slide2">
-      <input type="radio" name="slider" id="slide3">
-      <input type="radio" name="slider" id="slide4">
-      <input type="radio" name="slider" id="slide5">
-      <div class="slides left">
-
+  <div class="wrapper ">
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+    <input type="radio" name="slider" id="slide5">
+    <div class="slider-wrapper left">
+      <div class="slides">
         <div class="slide "><img src="./src/img-mem/Glushko.jpg" alt="Glushko">
         </div>
         <div class="slide "><img src="./src/img-mem/GTA.jpg" alt="GTA">
@@ -31,9 +29,10 @@
         </div>
         <div class="slide "><img src="./src/img-mem/Bazinga.jpg" alt="Bazinga">
         </div>
-
       </div>
-      <div class="mem-text left">
+    </div>
+    <div class="mem-text left">
+      <div class="text-wrapper">
         <p>Глушко покажет вам немного мемов</p>
         <p> Исследования - это важно</p>
         <p>Гравитация такая</p>
@@ -41,17 +40,28 @@
         <p> Бугагешенька </p>
       </div>
     </div>
-
-
-    <div class="controls">
-      <label for="slide1" class="button"></label>
-      <label for="slide2" class="button"></label>
-      <label for="slide3" class="button"></label>
-      <label for="slide4" class="button"></label>
-      <label for="slide5" class="button"></label>
+    <div id="controls">
+      <label for="slide1" class="button">
+        <div class="control"></div>
+      </label>
+      <label for="slide2" class="button">
+        <div class="control"></div>
+      </label>
+      <label for="slide3" class="button">
+        <div class="control"></div>
+      </label>
+      <label for="slide4" class="button">
+        <div class="control"></div>
+      </label>
+      <label for="slide5" class="button">
+        <div class="control"></div>
+      </label>
     </div>
-
+    <div class="hide-left"></div>
+    <div class="hide-right"></div>
+    <div class="hide-text"></div>
   </div>
+
 </body>
 
 </html>

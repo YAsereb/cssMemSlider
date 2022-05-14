@@ -88,7 +88,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
-  width: 12rem;
+  width: 13rem;
   height: 2.5rem;
   grid-column: 3/4;
   grid-row: 4/5;
@@ -103,21 +103,17 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.control {
-  background-image: url(https://img.icons8.com/material/20/000000/filled-circle.png);
+  cursor: pointer;
+  background-image: url(./src/icons/circle.png);
   background-repeat: no-repeat;
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  transition: 0.3s all;
 }
 
 #controls label:hover {
-  background: rgb(20, 63, 63);
-  cursor: pointer;
+  background-image: url(./src/icons/circle-hover.png);
+  transform: scale(1.1);
 }
-
 
 #slide1:checked~.left {
   transform: translateX(0%);
@@ -145,9 +141,9 @@ img {
 #slide3:checked~#controls label:nth-child(3),
 #slide4:checked~#controls label:nth-child(4),
 #slide5:checked~#controls label:nth-child(5) {
-  background-color: rgb(151, 26, 95);
+  background-image: url(./src/icons/circle-active.png);
 }
 
 input {
-  display: none;
+  visibility: hidden;
 }
